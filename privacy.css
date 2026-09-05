@@ -1,0 +1,81 @@
+:root {
+  --ink: #12345b;
+  --blue: #1769aa;
+  --line: #dbe7f1;
+  --muted: #5b6f82;
+  --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding-inline: 32px; }
+.site-header { padding: 25px 0; border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; }
+.wordmark { font-size: 26px; font-weight: 800; letter-spacing: -1.5px; }
+.wordmark span, .back-link span, .contact-email span { color: var(--blue); }
+.back-link { color: var(--muted); font-size: 12px; font-weight: 700; }
+.back-link:hover, .contact-email:hover { color: var(--blue); }
+
+.policy-hero { padding-top: 92px; padding-bottom: 84px; border-bottom: 1px solid var(--line); }
+.section-kicker, .policy-number {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(54px, 8vw, 94px); line-height: .98; letter-spacing: -.07em; margin: 25px 0 30px; }
+h1 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
+.policy-intro { max-width: 600px; color: var(--muted); font-size: 18px; line-height: 1.75; }
+.updated { margin: 30px 0 0; color: var(--blue); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+
+.policy-layout { display: grid; grid-template-columns: 220px minmax(0, 700px); gap: 105px; padding-top: 82px; padding-bottom: 100px; }
+.policy-aside { align-self: start; position: sticky; top: 24px; }
+.policy-aside > span { display: block; margin-bottom: 17px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.policy-aside nav { display: grid; gap: 9px; border-left: 1px solid var(--line); padding-left: 16px; }
+.policy-aside a { color: var(--muted); font-size: 12px; line-height: 1.4; }
+.policy-aside a:hover { color: var(--blue); }
+.policy-content { min-width: 0; }
+.policy-content section { padding-bottom: 58px; margin-bottom: 58px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+.policy-content section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.policy-number { display: block; margin-bottom: 13px; }
+h2 { margin-bottom: 21px; font-size: clamp(30px, 4vw, 42px); line-height: 1.1; letter-spacing: -.05em; }
+h3 { margin: 28px 0 8px; font-size: 15px; }
+.policy-content p { max-width: 650px; color: var(--muted); }
+.policy-content ul { max-width: 650px; margin: 0 0 20px; padding-left: 22px; color: var(--muted); }
+.policy-content li { padding-left: 6px; margin-bottom: 10px; }
+.policy-content strong { color: var(--ink); }
+.inline-link { color: var(--blue); text-decoration: underline; }
+.company-registration { margin-top: 24px; font-size: 13px; font-weight: 700; }
+.contact-email { display: inline-block; margin-top: 7px; color: var(--ink); font-size: 14px; font-weight: 700; border-bottom: 1px solid var(--blue); }
+.footer { display: flex; align-items: center; gap: 30px; border-top: 1px solid var(--line); padding: 25px 32px 35px; color: var(--muted); font-size: 11px; }
+.footer-brand { color: var(--ink); font-size: 26px; font-weight: 800; letter-spacing: -1.5px; }
+.footer-links { display: flex; gap: 24px; margin-left: auto; }
+.footer-links a:hover { color: var(--blue); }
+.footer-legal { margin: 0; }
+
+@media (max-width: 760px) {
+  .container { padding-inline: 20px; }
+  .site-header { padding: 18px 0; }
+  .policy-hero { padding-top: 64px; padding-bottom: 58px; }
+  .policy-intro { font-size: 16px; }
+  .policy-layout { display: block; padding-top: 55px; padding-bottom: 72px; }
+  .policy-aside { position: static; margin-bottom: 58px; }
+  .policy-aside nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+  .policy-content section { padding-bottom: 45px; margin-bottom: 45px; }
+  .footer { align-items: flex-start; flex-wrap: wrap; gap: 12px 20px; padding-inline: 20px; }
+  .footer-brand { width: 100%; }
+  .footer-links { margin-left: 0; flex-wrap: wrap; gap: 12px 20px; }
+  .footer-legal { width: 100%; }
+}

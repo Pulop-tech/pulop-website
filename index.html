@@ -123,12 +123,45 @@
         </div>
         <div class="founder-grid">
           <article class="founder-card">
-            <div class="founder-photo"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=85" alt="Portrait of Samantha Siwela" /></div>
-            <div class="founder-info"><span class="founder-role">Co-founder / Operations</span><h3>Samantha<br />Siwela</h3><a href="mailto:samantha.siwela@pulop.co.za">samantha.siwela@pulop.co.za <span>↗</span></a></div>
+            <div class="founder-photo">
+              <img src="assets/sammy.webp" alt="Portrait of Samantha Siwela" loading="lazy" />
+            </div>
+            <div class="founder-info">
+              <span class="founder-role">Co-Founder / CEO</span>
+              <span class="founder-study">Computer Science Student</span>
+              <h3>Samantha<br />Siwela</h3>
+              <div class="founder-contact">
+                <a href="mailto:samantha.siwela@pulop.co.za">
+                  samantha.siwela@pulop.co.za <span>↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/samantha-siwela?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="Samantha Siwela on LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.76-2-5.51-4.67-5.51a4.05 4.05 0 0 0-3.63 2v-1.84H9.2V21h3.5v-6.18c0-1.63.3-3.2 2.32-3.2 1.99 0 2.02 1.86 2.02 3.3V21H21v-7.15Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
+
           <article class="founder-card">
-            <div class="founder-photo"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85" alt="Portrait of Aphiwe Mntambo" /></div>
-            <div class="founder-info"><span class="founder-role">Co-founder / Technology</span><h3>Aphiwe<br />Mntambo</h3><a href="mailto:aphiwemntambo@pulop.co.za">aphiwemntambo@pulop.co.za <span>↗</span></a></div>
+            <div class="founder-photo">
+              <img src="assets/aphiwe.webp" alt="Portrait of Aphiwe Mntambo" loading="lazy" />
+            </div>
+            <div class="founder-info">
+              <span class="founder-role">Co-Founder / CTO</span>
+              <span class="founder-study">Computer Science Student</span>
+              <h3>Aphiwe<br />Mntambo</h3>
+              <div class="founder-contact">
+                <a href="mailto:aphiwemntambo@pulop.co.za">
+                  aphiwemntambo@pulop.co.za <span>↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aphiwe-mntambo-286724374?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="Aphiwe Mntambo on LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.76-2-5.51-4.67-5.51a4.05 4.05 0 0 0-3.63 2v-1.84H9.2V21h3.5v-6.18c0-1.63.3-3.2 2.32-3.2 1.99 0 2.02 1.86 2.02 3.3V21H21v-7.15Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -136,16 +169,40 @@
       <section class="contact-wrap container" id="contact">
         <div class="contact-card">
           <div class="contact-copy"><div class="section-kicker light-kicker">04 / Let’s make access easier</div><h2>Bring reliable delivery<br /><em>to your clinic network.</em></h2><p>Tell us a little about your organization and we’ll be in touch.</p><div class="contact-aside">Good healthcare should<br /><span>meet people where they are.</span></div></div>
-          <form class="inquiry-form">
-            <label for="email">Work email</label><input id="email" type="email" placeholder="you@organization.org" required />
-            <label for="organization">Organization type</label><select id="organization" required><option value="" disabled selected>Select one</option><option>Public Clinic</option><option>NGO</option><option>Logistics Partner</option></select>
-            <button class="button button-light" type="submit">Get in touch <span aria-hidden="true">↗</span></button>
-            <p class="form-message" role="status"></p>
-          </form>
+          <form class="inquiry-form" name="partnership-inquiry" data-netlify="true">
+  <label for="email">Work email</label>
+  <!-- ADDED: name="email" -->
+  <input id="email" name="email" type="email" placeholder="you@organization.org" required />
+  
+  <label for="organization">Organization type</label>
+  <!-- ADDED: name="organization" -->
+  <select id="organization" name="organization" required>
+    <option value="" disabled selected>Select one</option>
+    <option value="Public Clinic">Public Clinic</option>
+    <option value="NGO">NGO</option>
+    <option value="Logistics Partner">Logistics Partner</option>
+  </select>
+  
+  <div class="consent-wrapper">
+    <input type="checkbox" id="privacy-consent" name="privacy-consent" required />
+    <label for="privacy-consent">I agree to Pulop's <a href="privacy.html">Privacy Policy</a> and consent to being contacted.</label>
+  </div>
+  
+  <button class="button button-light" type="submit">Get in touch <span aria-hidden="true">↗</span></button>
+  <p class="form-message" role="status"></p>
+</form>
         </div>
       </section>
     </main>
 
-    <footer class="footer container"><a class="wordmark" href="#">Pulop<span>.</span></a><span>© 2024 Pulop. Made for access.</span><a href="#">POPIA Privacy Policy</a><a href="mailto:info@pulop.co.za">info@pulop.co.za <span aria-hidden="true">↗</span></a></footer>
+    <footer class="footer">
+      <div class="footer-brand">Pulop.</div>
+      <div class="footer-links">
+        <a href="privacy.html">POPIA Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="mailto:info@pulop.co.za">info@pulop.co.za ↗</a>
+      </div>
+      <p class="footer-legal">&copy; 2026 Pulop (Pty) Ltd. Reg. No: 2026/714105/07. Made for access.</p>
+    </footer>
   </body>
 </html>
