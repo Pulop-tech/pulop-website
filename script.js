@@ -13,9 +13,9 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
-document.querySelector(".inquiry-form")?.addEventListener("submit", (event) => {
+/*document.querySelector(".inquiry-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const message = document.querySelector(".form-message");
   message.textContent = "Thanks — we’ll be in touch shortly.";
   event.currentTarget.reset();
-});
+});*/
